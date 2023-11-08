@@ -1,0 +1,95 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    dynamic images_results = ViewData["images_results"];
+    dynamic suggested_searches = ViewData["suggested_searches"];
+
+}
+@using Newtonsoft.Json.Linq;
+
+<div>
+    <div class="google-content">
+        <div class="google-content-inner">
+            <div class="google-logo">
+                <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+            </div>
+            <form method="get" onsubmit="helloWorld()">
+                @Html.TextBox("searchQuery")
+                <span class="glyphicon glyphicon-volume-up my-icon"></span>
+                <span class="glyphicon glyphicon-camera my-icon"></span>
+                <button class="search-icon" type="submit">
+                    <span class="glyphicon glyphicon-search my-icon"></span>
+                </button>
+            </form>
+        </div>
+        <div class="icon-div">
+            <div class="glyphicon glyphicon-th my-icon-2"></div>
+            <div class="glyphicon glyphicon-cog my-icon-2"></div>
+            <div class="glyphicon glyphicon-user my-icon-2"></div>
+        </div>
+    </div>
+
+    <div class="google-content-2">
+        <div class="bottom-icon-div">
+            <div style="border: none;">
+                &#60;&nbsp; All
+            </div>
+            <div style="background-color: rgb(229,238,253); color: rgb(25,94,198); border: 1px solid transparent;">
+                Images
+            </div>
+            <div>Videos</div>
+            <div>Shopping</div>
+            <div>News</div>
+            <div><span class="glyphicon glyphicon-option-vertical"></span>More</div>
+        </div>
+        <div class="bottom-icon-div-2">
+            <div>Tools</div>
+            <div> <span class="glyphicon glyphicon-bookmark"></span> Collections</div>
+            <div>SafeSearch</div>
+        </div>
+    </div>
+
+</div>
+
+<div style="position: relative;">
+    <div class="suggested-search-wrapper">
+
+        @if (suggested_searches != null)
+        {
+            foreach (dynamic suggestion in suggested_searches)
+            {
+                <div class="suggested-search">
+                    <img src="@suggestion.thumbnail" />
+                    <div class="suggested-search-text">@suggestion.name</div>
+                </div>
+            }
+        }
+
+    </div>
+
+
+    @if (suggested_searches != null)
+    {
+        <div class="right-arrow">&#62;</div>
+
+    }
+</div>
+
+
+
+
+<div class="masonry-with-columns" id="masonry-with-columns">
+    @if (images_results != null)
+    {
+        foreach (dynamic image in images_results)
+        {
+
+                <a href="@image.link" target="_blank" style="display: contents">
+                    <img src="@image.original" alt="Image">
+                </a>
+
+
+        }
+    }
+</div>

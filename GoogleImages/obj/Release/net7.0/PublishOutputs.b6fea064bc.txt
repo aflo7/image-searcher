@@ -1,0 +1,8 @@
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/GoogleImages
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/appsettings.Development.json
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/appsettings.json
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/GoogleImages.dll
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/GoogleImages.deps.json
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/GoogleImages.runtimeconfig.json
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/GoogleImages.pdb
+/Users/andres/Desktop/GoogleImages/GoogleImages/obj/Release/net7.0/PubTmp/Out/Newtonsoft.Json.dll
